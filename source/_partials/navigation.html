@@ -1,0 +1,16 @@
+<nav class="navigation-container l-row navigation-container--collapsed">
+  <div class="top-navigation">
+    <ul class="top-navigation--primary">
+      <li><a class="" href="/">Inicio</a></li>
+      {% for category in site.categories %}
+      <li><a href="{{ category.url }}">{{ category.name }}</a></li>
+      {% endfor %}
+    </ul>
+    <ul class="top-navigation--secondary">
+      {% for tag in site.tags %}
+      <li><a href="{{ tag.url }}">{{ tag.name }}</a></li>
+      {% endfor %}
+    </ul>
+    <div class="navbar__toggle"><a class="js-navbar-toggle" href="">Todas las secciones</a></div>
+  </div>
+</nav>

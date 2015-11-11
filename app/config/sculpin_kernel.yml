@@ -1,0 +1,10 @@
+sculpin_content_types:
+    posts:
+        permalink: :filename/
+    guias:
+        layout: default
+        permalink: guias/:slug_filename/
+    secciones:
+        type: meta
+        singular_name: seccion
+        layout: seccion

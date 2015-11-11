@@ -1,0 +1,17 @@
+{
+    "name": "opcions/opcions.github.io",
+    "description": "Opcions wireframe",
+    "type": "sculpin site",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eduardo Esclapes",
+            "email": "eduardo.esclapes@gmail.com",
+            "homepage": "http://opcions.gihub.io"
+        }
+    ],
+    "require": {
+    },
+    "config": {
+    }
+}
