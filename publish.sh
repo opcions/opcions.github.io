@@ -12,6 +12,11 @@ git checkout master
 
 cp -RL output_prod/* .
 rm -rf output_*
+rm -rf app
+rm -rf source
+rm -f package.json
+rm -f sculpin.json
+rm -f publish.sh
 
 git add -A .
 git commit -m "$1"
