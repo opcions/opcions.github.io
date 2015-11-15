@@ -10,12 +10,12 @@ npm run build:prod
 git stash
 git checkout master
 
-cp -R output_prod/* .
+cp -RL output_prod/* .
 rm -rf output_*
 
-git add *
+git add -A .
 git commit -m "$1"
 git push origin --all
 
-git checkout drafts
+git checkout drafts -f
 git stash pop
