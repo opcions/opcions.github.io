@@ -2,7 +2,7 @@ sculpin_content_types:
     posts:
         permalink: :filename/
     guias:
-        layout: default
+        layout: guias
         permalink: guias/:slug_filename/
     secciones:
         type: meta

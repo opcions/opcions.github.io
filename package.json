@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sculpin generate --quiet",
-    "build:watch": "watch 'npm run build' source",
-    "styles": "node-sass -o source/css --include-path node_modules/zurb-foundation-5/scss --include-path source/_sass/_partials --source-map true source/_sass",
-    "styles:watch": "watch 'npm run styles' source/_sass",
-    "dev": "parallelshell 'npm run build:watch' 'npm run styles:watch' 'browser-sync start --server output_dev --files output_dev/**'"
+    "build": "sculpin generate",
+    "build:watch": "sculpin generate --quiet --watch",
+    "styles": "node-sass -o source/css --include-path node_modules/zurb-foundation-5/scss --include-path app/_sass/_partials --source-map true app/_sass",
+    "styles:watch": "watch 'npm run styles' app/_sass",
+    "bsync": "browser-sync start --reload-delay 2000 --server output_dev --files output_dev/**",
+    "dev": "parallelshell 'npm run build:watch' 'npm run styles:watch' 'npm run bsync'"
   },
   "repository": {
     "type": "git",
