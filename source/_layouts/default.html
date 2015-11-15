@@ -13,9 +13,7 @@
 
       {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
 
-      <footer class="container">
-          &copy; {{ "now"|date("Y") }} {{ site.title }}
-      </footer>
+      {% include('footer.html') %}
 
       {% include('footer_scripts.html') %}
 

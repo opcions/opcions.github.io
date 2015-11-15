@@ -1,0 +1,50 @@
+{% extends "default.html" %}
+
+
+{% block content_wrapper %}
+    <div class="row">
+      <div class="small-12 columns">
+        <h1>{{ page.title }}</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-8 columns">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <aside class="small-4 columns">
+        <nav id="toc-magellan"></nav>
+      </aside>
+
+    </div>
+{% endblock %}
+
+
+{% block scripts %}
+<script type="text/javascript">
+  $('#toc-magellan').toc({
+    'selectors': 'h2,h3',
+    'anchorName': function(i, heading, prefix) { //custom function for anchor name
+        return prefix+i;
+    },
+    'activeClass': 'active'
+  });
+
+  var $$ = {
+    el: $("#toc-magellan"),
+    log: $("#log"),
+    elPosition: $("#toc-magellan").offset().top
+  };
+
+  $(window).on("scroll", function(e) {
+    if ($(this).scrollTop() > $$.elPosition) {
+      $$.el.addClass('stick');
+    }
+    else {
+      $$.el.removeClass('stick');
+    }
+  });
+
+</script>
+{% endblock %}

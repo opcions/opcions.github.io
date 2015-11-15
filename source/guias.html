@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: Guías de consumo consciente y transformador
 slug: guias
 signpost:
     - inicio
@@ -8,21 +8,36 @@ signpost:
 guias:
     - name: Detergentes
       url: /guias/detergentes
+      label: Hogar
     - name: Detergentes off-canvas
       url: /guias/detergentes-offcanvas
-    - name: Pilas y baterías
+      label: Hogar
+    - name: Calefacción
       url: /guias/detergentes
+      label: Energia
     - name: Detergentes
       url: /guias/detergentes
-    - name: Un nombre de una guia de consumo muy largo
+      label: Hogar
+    - name: Otra guía de producto
       url: /guias/detergentes
+      label: Otr categoría
     - name: Pilas y baterías
       url: /guias/detergentes
+      label: Energia
+
 ---
 
 <div class="row">
-  <h1>Guias de consumo consciente y transformador</h1>
+
+  <div class="small-12 columns">
+    <h1>{{ page.title }}</h1>
+  </div>
+
+</div>  
+<div class="row">
+
   {% for guia in page.guias %}
     {% include 'card.html' with {'element': guia} %}
   {% endfor %}
+
 </div>
