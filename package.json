@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "sculpin generate",
+    "build:prod": "npm run styles && sculpin generate --env=prod",
     "build:watch": "sculpin generate --quiet --watch",
     "styles": "node-sass -o source/css --include-path node_modules/zurb-foundation-5/scss --include-path app/_sass/_partials --source-map true app/_sass",
     "styles:watch": "watch 'npm run styles' app/_sass",
