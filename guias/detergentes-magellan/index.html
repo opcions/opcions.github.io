@@ -90,19 +90,14 @@ pre code { background-color: inherit; }
       </ul>
   </div>
 
-      <div class="off-canvas-wrap" data-offcanvas>
-  <main class="inner-wrap">
-    <aside id="toc" class="left-off-canvas-menu">
-    </aside>
-    <div class="row">
+          <div class="row">
       <div class="small-12 columns">
-        <h1>Consumo consciente de detergentes </h1>
-        <span role="button" tabindex="0" href="#toc" class="button tiny left-off-canvas-toggle" >índice</span>
+        <h1>Consumo consciente de detergentes</h1>
       </div>
     </div>
 
     <div class="row">
-      <div class="small-12 columns">
+      <div class="small-8 columns">
         <ul>
 <li>El ingrediente más perjudicial para los ríos y lagos son los fosfatos, todavía omnipresentes en los detergentes convencionales para lavavajillas. Por eso en este caso es particularmente importante usar detergentes ecológicos.</li>
 <li>Como resultado de las presiones de la industria de la detergencia, no se han prohibido ni limitado varios ingredientes no biodegradables, muy usados en los detergentes convencionales.</li>
@@ -669,12 +664,11 @@ En la investigación para elaborar este cuaderno hemos pedido a un veterano fabr
 </ol>
 </div>
       </div>
+      <aside class="small-4 columns">
+        <nav id="toc-magellan"></nav>
+      </aside>
 
     </div>
-  <a class="exit-off-canvas"></a>
-  </main>
-
-</div>
 
       <footer class="footer">
   <div class="row">
@@ -701,11 +695,29 @@ En la investigación para elaborar este cuaderno hemos pedido a un veterano fabr
 <script src="/js/foundation/foundation.offcanvas.js"></script>
 
       <script type="text/javascript">
-  $('#toc').toc({
+  $('#toc-magellan').toc({
+    'selectors': 'h2,h3',
     'anchorName': function(i, heading, prefix) { //custom function for anchor name
         return prefix+i;
+    },
+    'activeClass': 'active'
+  });
+
+  var $$ = {
+    el: $("#toc-magellan"),
+    log: $("#log"),
+    elPosition: $("#toc-magellan").offset().top
+  };
+
+  $(window).on("scroll", function(e) {
+    if ($(this).scrollTop() > $$.elPosition) {
+      $$.el.addClass('stick');
+    }
+    else {
+      $$.el.removeClass('stick');
     }
   });
+
 </script>
 
       
