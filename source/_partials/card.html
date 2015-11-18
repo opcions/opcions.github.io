@@ -1,19 +1,17 @@
-<div class="small-12 medium-4 large-3 columns">
-  <div class="card">
-  <a class="clickable" href="{{ element.url }}">
-    <div class="image">
-      <img src="holder.js/500x200">
-      <div class="text-overlay">
-        <h2>{{ element.name }}</h2>
-      </div>
+<div class="card">
+<a class="card__clickable" href="{{ element.url }}">
+  <div class="card__image">
+    <img src="holder.js/350x200">
+    <div class="text-overlay">
+      <h2>{{ element.name }}</h2>
     </div>
-    <div class="content">
-      <p>Descripción corta de cada guía de consumo que puede ser casi un subtítulo.</p>
-    </div>
-    <div class="action">
-      <a href="#" class="label secondary round left">{{ element.label }}</a>
-      <a href='{{ element.url }}'>Leer más</a>
-    </div>
-  </a>
   </div>
+  <div class="card__content">
+    <p>Descripción corta de cada guía de consumo que puede ser casi un subtítulo.</p>
+  </div>
+  <div class="card__action">
+    <a href="#" class="label secondary round left">{{ element.label }}</a>
+    <a href='{{ element.url }}'>Leer más</a>
+  </div>
+</a>
 </div>

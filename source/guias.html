@@ -10,7 +10,7 @@ guias:
       url: /guias/detergentes
       label: Hogar
     - name: Calefacción
-      url: /guias/
+      url: /guias/detergentes
       label: Energía
     - name: Detergentes
       url: /guias/detergentes
@@ -21,9 +21,39 @@ guias:
     - name: Aceite de oliva
       url: /guias/detergentes
       label: Alimentación
+    - name: Ordenadores
+      url: /guias/detergentes
+      label: Tecnología
     - name: Vambas
       url: /guias/detergentes
       label: Ropa y complementos
+    - name: Libros
+      url: /guias/detergentes
+      label: Cultura y ocio
+    - name: Detergentes
+      url: /guias/detergentes
+      label: Hogar
+    - name: Calefacción
+      url: /guias/detergentes
+      label: Energía
+    - name: Detergentes
+      url: /guias/detergentes
+      label: Hogar
+    - name: Azucar
+      url: /guias/detergentes
+      label: Alimentación
+    - name: Aceite de oliva
+      url: /guias/detergentes
+      label: Alimentación
+    - name: Ordenadores
+      url: /guias/detergentes
+      label: Tecnología
+    - name: Vambas
+      url: /guias/detergentes
+      label: Ropa y complementos
+    - name: Libros
+      url: /guias/detergentes
+      label: Cultura y ocio
 
 ---
 
@@ -35,9 +65,22 @@ guias:
 
 </div>
 <div class="row">
+<ul class="medium-block-grid-3 large-block-grid-4">
 
   {% for guia in page.guias %}
+  {% if loop.index != 1 and loop.index % 4 == 1 %}
+  <li>
+    {% include 'publi-card.html' %}
+  </li>
+  {% endif %}
+
+  <li>
     {% include 'card.html' with {'element': guia} %}
+  </li>
+
+
+
   {% endfor %}
 
+</ul>
 </div>

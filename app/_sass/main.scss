@@ -5,6 +5,7 @@
 @import "normalize";
 @import "foundation/components/global";
 @import "foundation/components/grid";
+@import "foundation/components/block-grid";
 @import "foundation/components/buttons";
 @import "foundation/components/thumbs";
 @import "foundation/components/breadcrumbs";
@@ -20,8 +21,9 @@
 @import "navigation";
 @import "layout";
 @import "footer";
-@import "cards";
+@import "card";
 @import "toc";
+@import "publi-card";
 
 .text-center {
   text-align: center;

@@ -1,0 +1,22 @@
+.publi-card {
+  background-color: $vapor;
+  border: 1px solid $silver;
+  padding-bottom: 1em;
+  text-align: center;
+  margin: 0 auto 1.25rem;
+  &__info{
+    color: gray;
+    font-size: 0.8em;
+  }
+  &__ad {
+    margin: 1em;
+    display: block;
+    li {
+      padding-bottom: 0;
+    }
+    img {
+      object-fit: contain;
+    }
+
+  }
+}

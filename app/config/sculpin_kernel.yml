@@ -5,6 +5,6 @@ sculpin_content_types:
         layout: guias
         permalink: guias/:slug_filename/
     secciones:
-        type: meta
+        layout: secciones
         singular_name: seccion
-        layout: seccion
+        permalink: guias/seccion/:slug_filename/

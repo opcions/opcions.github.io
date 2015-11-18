@@ -1,0 +1,20 @@
+{% extends "default.html" %}
+
+
+{% block content_wrapper %}
+    <div class="row">
+      <div class="small-12 columns">
+        <h1>{{ page.title }}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <div class="right">
+          {% include 'publi-card.html' %}
+        </div>
+        {% block content %}
+        {% endblock %}
+      </div>
+
+    </div>
+{% endblock %}

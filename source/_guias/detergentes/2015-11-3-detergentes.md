@@ -44,7 +44,19 @@ use: ['secciones']
 </div>
 
 
+
+{% set ads = 1 %}
 {% for seccion in data.secciones %}
-  {% set vars = {'title': seccion.title, 'teaser': seccion.teaser, 'loop': loop} %}
+  {% if loop.index != 1 and loop.index % 3 == 1 %}
+  <div class="row">
+  <div class="small-9 small-centered columns">
+    {% include 'publi-card.html' with {'ads': ads} %}
+    {% set ads = ads + 1 %}
+  </div>
+  </div>
+  {% endif %}
+
+  {% set vars = { 'title': seccion.title, 'teaser': seccion.teaser, 'loop': loop, 'url': seccion.url } %}
+
   {% include 'seccion.html' with vars %}
 {% endfor %}
