@@ -1,0 +1,32 @@
+{
+  "name": "opcions.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sculpin generate",
+    "build:prod": "npm run styles && sculpin generate --env=prod",
+    "build:watch": "sculpin generate --quiet --watch",
+    "styles": "node-sass -o source/css --include-path node_modules/zurb-foundation-5/scss --include-path app/_sass/_partials --source-map true app/_sass",
+    "styles:watch": "watch 'npm run styles' app/_sass",
+    "bsync": "browser-sync start --reload-delay 2000 --server output_dev --files output_dev --logLevel silent",
+    "dev": "parallelshell 'npm run build:watch' 'npm run styles:watch' 'npm run bsync'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opcions/opcions.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opcions/opcions.github.io/issues"
+  },
+  "homepage": "https://github.com/opcions/opcions.github.io#readme",
+  "devDependencies": {
+    "live-reload": "^1.1.0",
+    "node-sass": "^3.4.1",
+    "parallelshell": "^2.0.0",
+    "watch": "^0.16.0",
+    "zurb-foundation-5": "^5.4.7"
+  }
+}
