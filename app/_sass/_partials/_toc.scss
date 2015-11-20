@@ -1,16 +1,11 @@
-#toc {
-  ul {
-    @include off-canvas-list;
-  }
-}
-
 #toc-magellan {
   .toc-h3 {
     padding-left: 1em;
     font-size: 0.8em;
   }
   ul {
-    @include side-nav;
+    @include menu-base;
+    @include menu-direction('vertical');
 
     li.active a {
       background: rgba(0, 0, 0, 0.025);

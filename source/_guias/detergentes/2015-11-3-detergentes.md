@@ -19,10 +19,9 @@ use:
   - secciones
 ---
 
-<div class="row">
-  <div class="small-12 columns">
-    <div class="panel">
-      <ul class="updates">
+<div class="row column">
+    <div class="guia__updates">
+      <ul class="">
       {% for update in page.updates %}
         <li>{{ update.date }}: {{ update.text }}</li>
       {% endfor %}
@@ -35,12 +34,10 @@ use:
       <li>{{ point }}</li>
     {% endfor %}
     </ul>
-
-  </div>
 </div>
 
 <div class="row">
-  <div class="small-9 small-centered columns">
+  <div class="medium-9 medium-centered columns">
     <h3>Artículos en esta guía</h3>
   </div>
 </div>
@@ -50,7 +47,7 @@ use:
 
   {% if loop.index != 1 and loop.index % 3 == 1 %}
   <div class="row">
-    <div class="small-9 small-centered columns">
+    <div class="medium-9 medium-centered columns">
       {% include 'publi-card.html' with {'ads': ads} %}
       {% set ads = ads + 1 %}
     </div>

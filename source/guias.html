@@ -57,30 +57,27 @@ guias:
 
 ---
 
-<div class="row">
+<div class="guias">
 
-  <div class="small-12 columns">
+  <div class="row column">
     <h1>{{ page.title }}</h1>
   </div>
 
-</div>
-<div class="row">
-<ul class="card-list">
 
-  {% for guia in page.guias %}
-  {% if loop.index != 1 and loop.index % 4 == 1 %}
-  <li class="card-list__item">
-    {% include 'publi-card.html' %}
-  </li>
-  {% endif %}
+  <ul class="card-list">
+    {% for guia in page.guias %}
+    {% if loop.index != 1 and loop.index % 4 == 1 %}
+    <li class="card-list__item">
+      {% include 'publi-card.html' %}
+    </li>
+    {% endif %}
 
-  <li class="card-list__item">
-    {% include 'card.html' with {'element': guia} %}
-  </li>
+    <li class="card-list__item">
+      {% include 'card.html' with {'element': guia} %}
+    </li>
 
+    {% endfor %}
 
+  </ul>
 
-  {% endfor %}
-
-</ul>
 </div>

@@ -2,11 +2,15 @@
 .header__actions {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  @include grid-column(6);
+}
+
+.header__brand {
+  @include grid-column(4);
 }
 
 .header__actions {
   text-align: right;
+  @include grid-column(8);
 }
 
 .header__action {

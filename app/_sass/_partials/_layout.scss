@@ -1,11 +1,9 @@
-@import "foundation/components/grid";
-
 .l-row, .l-header {
   @include grid-row();
   padding-bottom: 1.5rem;
 }
 
-@media #{$medium-up} {
+include breakpoint(breakpoint) {
   .header__brand {
     @include grid-column(4);
   }

@@ -1,48 +1,25 @@
 @charset "UTF-8";
 
 @import "settings";
+@import "foundation";
 
-@import "normalize";
-@import "foundation/components/global";
-@import "foundation/components/grid";
-@import "foundation/components/block-grid";
-@import "foundation/components/buttons";
-@import "foundation/components/thumbs";
-@import "foundation/components/breadcrumbs";
-@import "foundation/components/inline-lists";
-@import "foundation/components/offcanvas";
-@import "foundation/components/magellan";
-@import "foundation/components/labels";
-@import "foundation/components/panels";
-@import "foundation/components/side-nav";
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
 
+@import "util";
 @import "mixins";
 @import "header";
 @import "navigation";
 @import "layout";
 @import "footer";
 @import "toc";
+@import "guias";
 @import "card";
 @import "card-list";
 @import "publi-card";
 
-.text-center {
-  text-align: center;
-}
 
-.updates {
-  font-size: 0.8em;
-  li {
-    color: gray;
-  }
-}
-
-.lead {
-  font-size: 1.2em;
-  li {
-    padding-bottom: 0.4em;
-  }
-}
 
 $font-path: "../fonts/foundation-icons/foundation-icons";
 @font-face {

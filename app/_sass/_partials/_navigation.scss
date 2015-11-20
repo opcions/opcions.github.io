@@ -34,10 +34,7 @@
 }
 
 .signposting {
-  @include crumb-container;
-  li {
-    @include crumbs;
-  }
+  @include breadcrumbs-container;
 }
 
 
@@ -67,11 +64,4 @@
 
 .navbar--secondary.is-hidden {
   display: none;
-}
-
-.breadcrumbs {
-  @include crumb-container;
-  li {
-    @include crumbs;
-  }
 }
