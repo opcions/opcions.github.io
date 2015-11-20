@@ -17,4 +17,13 @@
       </div>
 
     </div>
+
+
+    {% include 'consultorio-cta.html' %}
+
+{% endblock %}
+
+{% block footer %}
+  {% include 'guia-navigation.html' %}
+  {{ parent() }}
 {% endblock %}

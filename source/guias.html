@@ -65,16 +65,16 @@ guias:
 
 </div>
 <div class="row">
-<ul class="medium-block-grid-3 large-block-grid-4">
+<ul class="card-list">
 
   {% for guia in page.guias %}
   {% if loop.index != 1 and loop.index % 4 == 1 %}
-  <li>
+  <li class="card-list__item">
     {% include 'publi-card.html' %}
   </li>
   {% endif %}
 
-  <li>
+  <li class="card-list__item">
     {% include 'card.html' with {'element': guia} %}
   </li>
 

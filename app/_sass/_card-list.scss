@@ -1,0 +1,31 @@
+@media #{$small-up} {
+  .card-list {
+    @include grid-column(12);
+    margin-left: 0;
+    &__item {
+      width: 100%;
+      list-style: none;
+    }
+  }
+}
+
+@media #{$medium-up} {
+.card-list {
+    @include block-grid(2);
+    &__item {
+      clear: none !important;
+    }
+  }
+}
+
+@media #{$large-up} {
+.card-list {
+    @include block-grid(3);
+  }
+}
+
+@media #{$xlarge-up} {
+.card-list {
+    @include block-grid(4);
+  }
+}
