@@ -3,9 +3,9 @@
 <div class="publi-card__info">
   <span class="small">publicidad</span>
 </div>
-<div class="publi-card__ad">
+<div class="publi-card__content">
   <a class="clickable" href="{{ element.url }}">
-    <ul class="medium-block-grid-{{ads}} small-block-grid-1">
+    <ul class="publi-card__ads publi-card__ads--{{ads}} ">
     {% for ad in range(1, ads) %}
         <li><img src="holder.js/{{size|default('250x250') }}"></li>
     {% endfor %}

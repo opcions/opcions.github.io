@@ -1,22 +1,31 @@
 .publi-card {
   background-color: $light-gray;
   border: 1px solid $medium-gray;
-  padding-bottom: 1em;
   text-align: center;
   margin: 0 auto 1.25rem;
   &__info{
     color: gray;
     font-size: 0.8em;
   }
-  &__ad {
-    margin: 1em;
-    display: block;
+  &__ads {
+    @include grid-layout(1, 'li');
+    @include grid-column-position('center');
+    display: inline-block;
+    margin: 0;
     li {
-      padding-bottom: 0;
+      list-style: none;
+      padding: 1em;
+    }
+    @include breakpoint('medium') {
+      &--2 {
+        @include grid-layout(2, 'li');
+      }
+      &--3 {
+        @include grid-layout(3, 'li');
+      }
     }
     img {
       object-fit: contain;
     }
-
   }
 }
