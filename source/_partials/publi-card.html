@@ -1,5 +1,5 @@
 {% set ads = ads ?: 1 %}
-<div class="publi-card">
+<div class="publi-card{%if state%} publi-card--{{state}} {%endif%}">
 <div class="publi-card__info">
   <span class="small">publicidad</span>
 </div>

@@ -4,8 +4,11 @@
 @import "foundation";
 
 @include foundation-global-styles;
-@include foundation-grid;
+@include foundation-float-classes;
 @include foundation-typography;
+@include foundation-button;
+@include foundation-grid;
+@include foundation-callout;
 
 @import "util";
 @import "mixins";

@@ -1,18 +1,26 @@
-
-    <div class="panel">
-      <h3>En esta guia</h3>
-      {% for seccion in data.secciones %}
-        {% if loop.index != 1 and loop.index % 3 == 1 %}
-        <div class="row">
-        <div class="small-9 small-centered columns">
-          {% include 'publi-card.html' with {'ads': ads} %}
-          {% set ads = ads + 1 %}
-        </div>
-        </div>
-        {% endif %}
-
-        {% set vars = { 'title': seccion.title, 'teaser': seccion.teaser, 'loop': loop, 'url': seccion.url } %}
-
-        {% include 'seccion.html' with vars %}
-      {% endfor %}
+<div class="guia-navigation">
+    <div class="row">
+      <div class="medium-9 columns medium-centered">
+          <h4>Estás leyendo la guía de consumo consciente de detergentes:</h4>
+      </div>
     </div>
+    <div class="row">
+      <div class="medium-9 columns medium-centered">
+        <ul>
+          {% for seccion in [
+          'Lavemos ropa y platos sin ensuciar ríos',
+          '¿Cuán importante es, usar detergentes ecológicos?',
+          'Por qué se siguen fabricando detergentes menos ecológicos de lo posible?',
+          '¿Cómo puedo reconocer los productos ecológicos de verdad?',
+          'Una sección más'] %}
+          {% if loop.index == 2%}
+          <li>{{seccion}}</li>
+          {% else %}
+          <li><a href="/guias/seccion/detergentes-ecologicos/">{{seccion}}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% include 'consultorio-cta.html' %}
+</div>

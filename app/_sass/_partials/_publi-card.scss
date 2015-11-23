@@ -3,6 +3,15 @@
   border: 1px solid $medium-gray;
   text-align: center;
   margin: 0 auto 1.25rem;
+  display: inline-block;
+  &--aside {
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    @include breakpoint(small only) {
+      width: 100%;
+    }
+  }
   &__info{
     color: gray;
     font-size: 0.8em;

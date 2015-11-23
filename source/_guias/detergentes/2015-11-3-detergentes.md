@@ -54,7 +54,7 @@ use:
   </div>
   {% endif %}
 
-  {% set vars = { 'title': seccion.title, 'teaser': seccion.teaser, 'loop': loop, 'url': seccion.url } %}
+  {% set vars = { 'title': seccion.title, 'teaser': seccion.teaser, 'loop': loop, 'url': '/guias/seccion/detergentes-ecologicos/' } %}
 
   {% include 'seccion.html' with vars %}
 
