@@ -1651,7 +1651,6 @@ includebreakpoint(breakpoint) .header__actions {
 .publi-card {
   background-color: #e6e6e6;
   border: 1px solid #cacaca;
-  padding-bottom: 1em;
   text-align: center;
   margin: 0 auto 1.25rem; }
   .publi-card__info {
