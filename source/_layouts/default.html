@@ -11,7 +11,13 @@
 
       {% include('signposting.html') %}
 
-      {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+      {% block content_wrapper %}
+      <div class="row">
+        <div class="medium-10 columns medium-offset-1">
+        {% block content %}{% endblock %}
+        </div>
+      </div>
+      {% endblock %}
 
       {% block footer %}
       {% include('footer.html') %}
@@ -25,9 +31,7 @@
       {% include('google_analytics.html') %}
 
       {% block scripts_after %}
-      <script>
-        $(document).foundation();
-      </script>
+
       {% endblock %}
     </body>
 </html>

@@ -3,19 +3,15 @@
 
 {% block content_wrapper %}
     <div class="row">
-      <div class="medium-9 medium-centered columns">
+      <div class="medium-7 medium-offset-1 columns">
         <h1>{{ page.title }}</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="medium-9 medium-centered columns">
-
-        {% include 'publi-card.html' with {'state': 'aside'} %}
 
         {% block content %}
         {% endblock %}
       </div>
-
+      <div class="medium-3 medium-pull-1 columns">
+        {% include 'publi-card.html' with {'state': 'aside'} %}
+      </div>
     </div>
 
 {% endblock %}

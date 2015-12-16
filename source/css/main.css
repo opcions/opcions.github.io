@@ -1851,7 +1851,8 @@ includebreakpoint(breakpoint) .header__actions {
   border: 1px solid #cacaca;
   text-align: center;
   margin: 0 auto 1.25rem;
-  display: inline-block; }
+  display: inline-block;
+  width: 100%; }
   .publi-card--aside {
     float: right;
     margin-left: 1em;
