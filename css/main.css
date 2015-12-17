@@ -2100,22 +2100,20 @@ includebreakpoint(breakpoint) .header__actions {
       object-fit: contain; }
 
 .ad[data-lazyad-loaded="true"] {
-  padding: 1em 1em 0.3em;
+  padding: 1em 0;
   border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6; }
+  border-bottom: 1px solid #e6e6e6;
+  margin: 1em 0; }
   .ad[data-lazyad-loaded="true"] img {
     margin: 0 auto;
     display: block; }
-  @media screen and (min-width: 0em) and (max-width: 31.9375em) {
-    .ad[data-lazyad-loaded="true"].ad_item--banner {
-      padding: 0;
-      border-top: 0px;
-      border-bottom: 0px; } }
+  .ad[data-lazyad-loaded="true"].ad_item--aside {
+    border: 0px; }
   .ad[data-lazyad-loaded="true"] .ad_info {
     text-align: center;
     font-size: 0.8em;
     color: #8a8a8a;
-    padding: 1em 0 0; }
+    margin: 0; }
 
 @font-face {
   font-family: "foundation-icons";
