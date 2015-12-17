@@ -2,11 +2,14 @@
   padding: 1em 0;
   border-top: 1px solid $light-gray;
   border-bottom: 1px solid $light-gray;
-  margin-top: 0.5em;
-  margin-bottom: 1em;
+  margin: 1em 0;
   img {
     margin: 0 auto;
     display: block;
+  }
+
+  &.ad_item--aside {
+    border: 0px;
   }
 
   .ad_info {

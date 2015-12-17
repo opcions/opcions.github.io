@@ -65,7 +65,15 @@ guias:
     {% for guia in page.guias %}
     {% if loop.index != 1 and loop.index % 4 == 1 %}
     <li class="card-list__item">
-      {% include 'publi-card.html' %}
+      <div class="ad ad_item ad_item--aside" data-lazyad>
+        <script type="text/lazyad">
+        <!--
+        <script language="JavaScript" type="text/javascript">
+          document.write(adHolderRectangle('300x300', '3CB371'));
+        </script>
+        -->
+        </script>
+      </div>
     </li>
     {% endif %}
 

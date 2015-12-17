@@ -2103,11 +2103,12 @@ includebreakpoint(breakpoint) .header__actions {
   padding: 1em 0;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
-  margin-top: 0.5em;
-  margin-bottom: 1em; }
+  margin: 1em 0; }
   .ad[data-lazyad-loaded="true"] img {
     margin: 0 auto;
     display: block; }
+  .ad[data-lazyad-loaded="true"].ad_item--aside {
+    border: 0px; }
   .ad[data-lazyad-loaded="true"] .ad_info {
     text-align: center;
     font-size: 0.8em;
