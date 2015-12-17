@@ -8,6 +8,7 @@
     <meta name="robots" content="noindex, follow">
 
 <link rel="stylesheet" href="/css/main.css" />
+<script src="/js/lazyad-loader.min.js" charset="utf-8"></script>
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -41,7 +42,46 @@ pre code { background-color: inherit; }
     </head>
     <body>
 
-      <header class="header l-header">
+      <div
+  class="ad ad_item ad_item--banner"
+  data-lazyad
+  data-matchmedia="only screen and (max-width: 420px)"
+>
+  <script type="text/lazyad">
+  <!--
+  <script language="JavaScript" type="text/javascript">
+    document.write(adHolder('300x50', '3CB371'));
+  </script>
+  -->
+  </script>
+</div>
+<div
+  class="ad ad_item ad_item--banner"
+  data-lazyad
+  data-matchmedia="only screen and (min-width: 421px) and (max-width: 840px)"
+>
+  <script type="text/lazyad">
+  <!--
+  <script language="JavaScript" type="text/javascript">
+     document.write(adHolder('600x100', 'DC143C'));
+  </script>
+  -->
+  </script>
+</div>
+<div
+  class="ad ad_item ad_item--banner"
+  data-lazyad
+  data-matchmedia="only screen and (min-width: 841px)"
+>
+  <script type="text/lazyad">
+  <!--
+  <script language="JavaScript" type="text/javascript">
+    document.write(adHolder('900x150'));
+  </script>
+  -->
+  </script>
+</div>
+<header class="header l-header">
   <div class="header__brand">
     <a class="header__logo" href="/">Opcions</a>
   </div>
@@ -113,7 +153,47 @@ written in Markdown. :)</p>
 
 
 
-            <footer class="footer">
+            <div
+  class="ad ad_item ad_item--banner"
+  data-lazyad
+  data-matchmedia="only screen and (max-width: 420px)"
+>
+  <script type="text/lazyad">
+  <!--
+  <script language="JavaScript" type="text/javascript">
+    document.write(adHolder('300x50', '3CB371'));
+  </script>
+  -->
+  </script>
+</div>
+<div
+  class="ad ad_item ad_item--banner"
+  data-lazyad
+  data-matchmedia="only screen and (min-width: 421px) and (max-width: 840px)"
+>
+  <script type="text/lazyad">
+  <!--
+  <script language="JavaScript" type="text/javascript">
+     document.write(adHolder('600x100', 'DC143C'));
+  </script>
+  -->
+  </script>
+</div>
+<div
+  class="ad ad_item ad_item--banner"
+  data-lazyad
+  data-matchmedia="only screen and (min-width: 841px)"
+>
+  <script type="text/lazyad">
+  <!--
+  <script language="JavaScript" type="text/javascript">
+    document.write(adHolder('900x150'));
+  </script>
+  -->
+  </script>
+</div>
+
+<footer class="footer">
   <div class="row">
     <div class="small-12 columns">
       <h4 class="slogan">Footer (pendiente)</h4>
@@ -132,7 +212,18 @@ written in Markdown. :)</p>
       
       <script src="/js/jquery-2.1.4.js" charset="utf-8"></script>
 <script src="/js/app.js" charset="utf-8"></script>
-<script src="/js/holder.js"></script>s
+<script src="/js/holder.js"></script>
+<script>// simple time helper
+  function currTime() {
+      var d = new Date();
+      return d.toLocaleTimeString();
+  }
+  function adHolder(size, color) {
+    color = typeof color !== 'undefined' ? color : 'ff0';
+    var source = 'http://placehold.it/' + size + '/' + color + '/000&text=' + size + '+' + currTime();
+    return '<img src="' + source + '"><p class="ad_info">publicidad</p>';
+  }
+</script>
 
             
       

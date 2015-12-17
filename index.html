@@ -8,6 +8,7 @@
     <meta name="robots" content="noindex, follow">
 
 <link rel="stylesheet" href="/css/main.css" />
+<script src="/js/lazyad-loader.min.js" charset="utf-8"></script>
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -41,7 +42,46 @@ pre code { background-color: inherit; }
     </head>
     <body>
 
-      <header class="header l-header">
+      <div
+  class="ad ad_item ad_item--banner"
+  data-lazyad
+  data-matchmedia="only screen and (max-width: 420px)"
+>
+  <script type="text/lazyad">
+  <!--
+  <script language="JavaScript" type="text/javascript">
+    document.write(adHolder('300x50', '3CB371'));
+  </script>
+  -->
+  </script>
+</div>
+<div
+  class="ad ad_item ad_item--banner"
+  data-lazyad
+  data-matchmedia="only screen and (min-width: 421px) and (max-width: 840px)"
+>
+  <script type="text/lazyad">
+  <!--
+  <script language="JavaScript" type="text/javascript">
+     document.write(adHolder('600x100', 'DC143C'));
+  </script>
+  -->
+  </script>
+</div>
+<div
+  class="ad ad_item ad_item--banner"
+  data-lazyad
+  data-matchmedia="only screen and (min-width: 841px)"
+>
+  <script type="text/lazyad">
+  <!--
+  <script language="JavaScript" type="text/javascript">
+    document.write(adHolder('900x150'));
+  </script>
+  -->
+  </script>
+</div>
+<header class="header l-header">
   <div class="header__brand">
     <a class="header__logo" href="/">Opcions</a>
   </div>
@@ -91,6 +131,98 @@ pre code { background-color: inherit; }
 
       <h1>Página de incio (pendiente)</h1>
 
+      <p>Links are very standard, and the color is preset to the Foundation primary color. <a href="global.html">Learn more about Foundation's global colors.</a></p>
+
+      <blockquote>
+        Those people who think they know everything are a great annoyance to those of us who do.
+        <cite>Isaac Asimov</cite>
+      </blockquote>
+
+      <hr>
+
+      <div class="media-object">
+        <div class="media-object-section">
+          <img src= "http://placeimg.com/200/200/people">
+        </div>
+        <div class="media-object-section">
+          <h4>Dreams feel real while we're in them.</h4>
+          <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+        </div>
+      </div>
+
+
+      <h2>Botones</h2>
+
+      <!-- Anchors (links) -->
+      <a href="about.html" class="button">Learn More</a>
+      <a href="#features" class="button">View All Features</a>
+
+      <!-- Buttons (actions) -->
+      <button type="button" class="success button">Save</button>
+      <button type="button" class="alert button">Delete</button>
+
+      <a class="tiny button" href="#">So Tiny</a>
+      <a class="small button" href="#">So Small</a>
+      <a class="large button" href="#">So Large</a>
+      <a class="expanded button" href="#">Such Expand</a>
+
+      <div class="button-group">
+        <a class="button">One</a>
+        <a class="button">Two</a>
+        <a class="button">Three</a>
+      </div>
+
+      <h3>Formularios</h3>
+
+      <form>
+        <label>Input Label
+          <input type="text" placeholder=".small-12.columns" aria-describedby="exampleHelpText">
+        </label>
+        <p class="help-text" id="exampleHelpText">Here's how you use this input field!</p>
+        <label>
+          How many puppies?
+          <input type="number" value="100">
+        </label>
+        <label>
+          What books did you read over summer break?
+          <textarea placeholder="None"></textarea>
+        </label>
+        <label>Select Menu
+          <select>
+            <option value="husker">Husker</option>
+            <option value="starbuck">Starbuck</option>
+            <option value="hotdog">Hot Dog</option>
+            <option value="apollo">Apollo</option>
+          </select>
+        </label>
+        <div class="row">
+          <fieldset class="large-6 columns">
+            <legend>Choose Your Favorite</legend>
+            <input type="radio" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">Red</label>
+            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+            <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
+          </fieldset>
+          <fieldset class="large-6 columns">
+            <legend>Check these out</legend>
+            <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+            <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+            <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
+          </fieldset>
+        </div>
+        <div class="row">
+          <div class="small-3 columns">
+            <label for="middle-label" class="right middle">Label</label>
+          </div>
+          <div class="small-9 columns">
+            <input type="text" id="middle-label" placeholder="Right- and middle-aligned text input">
+          </div>
+        </div>
+        <div class="input-group">
+          <span class="input-group-label">$</span>
+          <input class="input-group-field" type="url">
+          <a class="input-group-button button">Submit</a>
+        </div>
+      </form>
 
   </div>
 </div>
@@ -98,14 +230,54 @@ pre code { background-color: inherit; }
 <div class="row">
   <div class="small-12 columns">
     <div class="panel callout radius">
-    
+
       <p>Poco a poco.</p>
     </div>
   </div>
 </div>        </div>
       </div>
       
-            <footer class="footer">
+            <div
+  class="ad ad_item ad_item--banner"
+  data-lazyad
+  data-matchmedia="only screen and (max-width: 420px)"
+>
+  <script type="text/lazyad">
+  <!--
+  <script language="JavaScript" type="text/javascript">
+    document.write(adHolder('300x50', '3CB371'));
+  </script>
+  -->
+  </script>
+</div>
+<div
+  class="ad ad_item ad_item--banner"
+  data-lazyad
+  data-matchmedia="only screen and (min-width: 421px) and (max-width: 840px)"
+>
+  <script type="text/lazyad">
+  <!--
+  <script language="JavaScript" type="text/javascript">
+     document.write(adHolder('600x100', 'DC143C'));
+  </script>
+  -->
+  </script>
+</div>
+<div
+  class="ad ad_item ad_item--banner"
+  data-lazyad
+  data-matchmedia="only screen and (min-width: 841px)"
+>
+  <script type="text/lazyad">
+  <!--
+  <script language="JavaScript" type="text/javascript">
+    document.write(adHolder('900x150'));
+  </script>
+  -->
+  </script>
+</div>
+
+<footer class="footer">
   <div class="row">
     <div class="small-12 columns">
       <h4 class="slogan">Footer (pendiente)</h4>
@@ -124,7 +296,18 @@ pre code { background-color: inherit; }
       
       <script src="/js/jquery-2.1.4.js" charset="utf-8"></script>
 <script src="/js/app.js" charset="utf-8"></script>
-<script src="/js/holder.js"></script>s
+<script src="/js/holder.js"></script>
+<script>// simple time helper
+  function currTime() {
+      var d = new Date();
+      return d.toLocaleTimeString();
+  }
+  function adHolder(size, color) {
+    color = typeof color !== 'undefined' ? color : 'ff0';
+    var source = 'http://placehold.it/' + size + '/' + color + '/000&text=' + size + '+' + currTime();
+    return '<img src="' + source + '"><p class="ad_info">publicidad</p>';
+  }
+</script>
 
             
       
