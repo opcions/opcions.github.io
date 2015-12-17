@@ -1,24 +1,19 @@
 .ad[data-lazyad-loaded="true"] {
-  padding: 1em 1em 0.3em;
+  padding: 1em 0;
   border-top: 1px solid $light-gray;
   border-bottom: 1px solid $light-gray;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
   img {
     margin: 0 auto;
     display: block;
-  }
-  @include breakpoint(small only) {
-    &.ad_item--banner  {
-      padding: 0;
-      border-top: 0px;
-      border-bottom: 0px;
-    }
   }
 
   .ad_info {
     text-align: center;
     font-size: 0.8em;
     color: $dark-gray;
-    padding: 1em 0 0;
+    margin: 0;
   }
 
 }

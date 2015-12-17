@@ -39,18 +39,21 @@ use:
 </div>
 
 <div class="row">
-  <div class="medium-8 columns">
+  <div class="large-10 large-offset-1 columns">
     <h3>Artículos en esta guía</h3>
     {% for seccion in data.secciones %}
+
+      {% if loop.index != 1 and loop.index % 3 == 1 %}
+
+        {% include 'publi_banner.html' %}
+
+      {% endif %}
 
       {% set vars = { 'title': seccion.title, 'teaser': seccion.teaser, 'loop': loop, 'url': '/guias/seccion/detergentes-ecologicos/' } %}
 
       {% include 'seccion.html' with vars %}
 
-    {% endfor %}
-  </div>
-  <div class="medium-4 columns">
-    {% include 'publi-card.html' with {'state': 'aside'} %}
 
+    {% endfor %}
   </div>
 </div>

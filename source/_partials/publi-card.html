@@ -1,15 +1,14 @@
-{% set ads = ads ?: 1 %}
-<div class="publi-card{%if state%} publi-card--{{state}} {%endif%}">
-<div class="publi-card__info">
-  <span class="small">publicidad</span>
-</div>
-<div class="publi-card__content">
-  <a class="clickable" href="{{ element.url }}">
-    <ul class="publi-card__ads publi-card__ads--{{ads}} ">
-    {% for ad in range(1, ads) %}
-        <li><img src="holder.js/{{size|default('250x250') }}"></li>
-    {% endfor %}
-    </ul>
-  </a>
-</div>
+<div
+  class="ad ad_item ad_item--aside"
+  data-lazyad
+  data-matchmedia="only screen and (min-width: 1021px)"
+>
+
+  <script type="text/lazyad">
+  <!--
+  <script language="JavaScript" type="text/javascript">
+    document.write(adHolderRectangle('200x400'));
+  </script>
+  -->
+  </script>
 </div>
