@@ -1,3 +1,14 @@
 <script src="/js/jquery-2.1.4.js" charset="utf-8"></script>
 <script src="/js/app.js" charset="utf-8"></script>
-<script src="/js/holder.js"></script>s
+<script src="/js/holder.js"></script>
+<script>// simple time helper
+  function currTime() {
+      var d = new Date();
+      return d.toLocaleTimeString();
+  }
+  function adHolder(size, color) {
+    color = typeof color !== 'undefined' ? color : 'ff0';
+    var source = 'http://placehold.it/' + size + '/' + color + '/000&text=' + size + '+' + currTime();
+    return '<img src="' + source + '"><p class="ad_info">publicidad</p>';
+  }
+</script>

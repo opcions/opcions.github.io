@@ -7,8 +7,10 @@
 @include foundation-float-classes;
 @include foundation-typography;
 @include foundation-button;
+@include foundation-forms;
 @include foundation-grid;
 @include foundation-callout;
+@include foundation-media-object;
 
 @import "util";
 @import "mixins";
@@ -21,6 +23,7 @@
 @import "card";
 @import "card-list";
 @import "publi-card";
+@import "publi-banner";
 
 
 
