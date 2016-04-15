@@ -1,13 +1,22 @@
 {% include 'publi_banner.html' %}
+<div class="header--secondary">
+  <div class="header__actions">
+    <a class="header__action header__action--secondary" href="#">cast</a>
+    <a class="header__action header__action--secondary is-active" href="#">cat</a>
+  </div>
+  <div class="header__actions">
+    <a class="header__action" href="#">Hazte socio</a>
+    <a class="header__action" href="#">Acceso</a>
+    <div class="header__action header__action--search">
+      <button><i clas="fa fa-search"></i></button>
+    </div>
+  </div>
+</div>
 <header class="header l-header">
   <div class="header__brand">
     <a class="header__logo" href="{{ site.url }}/">{{ site.title }}</a>
   </div>
-  <div class="header__actions">
-    <a class="header__action" href="#">Acceso a socios</a>
-    <a class="header__action" href="#">Suscríbete</a>
-    <div class="header__action">
-      <input type="text" placeholder="Buscar"><a href="" class="button tiny">Buscar</a>
-    </div>
-  </div><!--/.nav-collapse -->
+  <div class="top-navigation">
+    <div class="navbar__toggle"><a class="js-navbar-toggle" href="">Menu</a></div>
+  </div>
 </header>

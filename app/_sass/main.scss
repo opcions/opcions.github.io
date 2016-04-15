@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import "vars/colors";
+@import "vars/fonts";
 @import "settings";
 @import "foundation";
 
@@ -12,18 +14,19 @@
 @include foundation-callout;
 @include foundation-media-object;
 
-@import "util";
-@import "mixins";
-@import "header";
-@import "navigation";
-@import "layout";
-@import "footer";
-@import "toc";
-@import "guias";
-@import "card";
-@import "card-list";
-@import "publi-card";
-@import "publi-banner";
+@import "partials/util";
+@import "mixins/mixins";
+@import "partials/header";
+@import "partials/navigation";
+@import "partials/layout";
+@import "partials/footer";
+@import "partials/toc";
+@import "partials/guias";
+@import "partials/card";
+@import "partials/card-list";
+@import "partials/publi-card";
+@import "partials/publi-banner";
+@import "partials/homepage";
 
 
 

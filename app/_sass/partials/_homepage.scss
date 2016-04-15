@@ -1,0 +1,121 @@
+/* article teaser basics */
+.article-teaser {
+  margin-bottom: 1em;
+}
+
+.article-teaser__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.article-teaser__summary {
+  position: relative;
+  max-height: 7em;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2em;
+    background: linear-gradient(to top, white, transparent);
+  }
+}
+
+.featured-story {
+  position: relative;
+}
+.featured-story__image {
+  width: 100%;
+  @include aspect-ratio(9, 12, div);
+  .u-placeholder {
+    background-image: url('//placehold.it/1500x1000?text=9:12');
+    background-position: center;
+    background-size: cover;
+  }
+  @include breakpoint(medium) {
+    @include aspect-ratio(16, 9, div);
+    .u-placeholder {
+      background-image: url('//placehold.it/1500x1000?text=16:9');
+    }
+  }
+}
+.featured-story__overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  text-align: center;
+  width: 90vw;
+  height: 40%;
+  overflow: hidden;
+}
+
+
+
+
+/* featured blocks made of articles */
+
+.featured-block {
+  margin-top: 2em;
+  @include grid-row;
+}
+
+.featured-block__title {
+  @include grid-column;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+  color: gray;
+  text-transform: uppercase;
+}
+
+.featured-block__primary,
+.featured-block__secondary {
+  @include breakpoint(medium) {
+    @include grid-col(6);
+  }
+}
+
+.featured-block__secondary .article-teaser {
+  @include grid-row;
+  margin-bottom: 2em;
+
+  .article-teaser__image {
+    @include grid-col(3);
+  }
+  .article-teaser__body {
+    @include grid-col(9);
+    @include grid-col-end();
+  }
+
+}
+
+/* 2 horizontal secondary teasers */
+
+.featured-block--secondary-grid .featured-block__secondary .article-teaser {
+  @include grid-col(6);
+  & > * {
+    width: 100%;
+    display: block;
+    max-width: none;
+  }
+  .article-teaser__summary {
+    display: none;
+  }
+}
+
+.featured-block--one-third {
+  .featured-block__primary {
+    @include grid-col-size(4);
+  }
+  .featured-block__secondary {
+    @include grid-col-size(8);
+    .article-teaser__image {
+      @include grid-col-size(4);
+    }
+    .article-teaser__body {
+      @include grid-col-size(8);
+    }
+  }
+}

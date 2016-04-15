@@ -1,0 +1,10 @@
+.navigation-container {
+  @include grid-row;
+  &--collapsed {
+
+  }
+}
+
+.signposting {
+  @include breadcrumbs-container;
+}

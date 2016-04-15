@@ -1,0 +1,13 @@
+<section class="featured-block {{ class }}">
+  <h2 class="featured-block__title">{{ title }}</h2>
+
+  <div class="featured-block__primary">
+    {% include 'article-teaser.html' %}
+  </div>
+
+  <div class="featured-block__secondary">
+    {% for i in 1..n %}
+      {% include 'article-teaser.html' %}
+    {% endfor %}
+  </div>
+</section>

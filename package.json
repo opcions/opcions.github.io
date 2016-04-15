@@ -7,7 +7,7 @@
     "build": "sculpin generate",
     "build:prod": "npm run styles && sculpin generate --env=prod",
     "build:watch": "sculpin generate --quiet --watch",
-    "styles": "node-sass -o source/css --include-path app/_sass/_partials --include-path app/_sass/_mixins --include-path node_modules/foundation-sites/scss --source-map true app/_sass",
+    "styles": "node-sass -o source/css --include-path node_modules/foundation-sites/scss --source-map true app/_sass",
     "styles:watch": "watch 'npm run styles' app/_sass",
     "bsync": "browser-sync start --reload-delay 2000 --server output_dev --files output_dev --logLevel info",
     "dev": "parallelshell 'npm run build:watch' 'npm run styles:watch' 'npm run bsync'"

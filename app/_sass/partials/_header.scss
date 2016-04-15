@@ -1,0 +1,40 @@
+.header,
+.header--secondary {
+  @include grid-column-row;
+}
+
+.header--secondary {
+  text-align: right;
+  vertical-align: middle;
+}
+
+.header__actions {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1em;
+  .header__action {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-right: 1px solid gray;
+    &:last-of-type {
+      padding-right: 0;
+      border-right: none;
+    }
+  }
+}
+
+.header__action--secondary {
+  font-size: 0.8em;
+  line-height: 0.8em;
+}
+
+.header__brand,
+.top-navigation {
+  @include grid-column(3);
+  padding: 1em 0;
+}
+
+.top-navigation {
+  float: right;
+  text-align: right;
+}
