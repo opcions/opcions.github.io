@@ -1,4 +1,5 @@
 .ad[data-lazyad-loaded="true"] {
+  @include grid-col-row;
   padding: 1em 0;
   border-top: 1px solid $light-gray;
   border-bottom: 1px solid $light-gray;
